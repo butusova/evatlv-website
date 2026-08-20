@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Ktav Yad CLM";
+  src: url("/assets/media/Ktav Yad CLM BoldItalic.woff2") format("woff2");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "BN Gremlins";
+  src: url("/assets/media/BN Gremlins Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --builder-stroke-info: transparent;
+  --color-primary: #4a4a43;
+  --color-background: #fff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  color: #252522;
+  background: #fff;
+  font-family: Nunito, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.website-preview { width: 100%; min-height: 100vh; }
+.block-controls,
+.guides,
+.grid-ghost,
+.add-block-button,
+.element-controls,
+[data-qa^="builder-btn-addsection"] { display: none !important; }
+
+.block-layout-container { width: 100%; }
+.block-layout { margin-inline: auto; }
+.text-box { pointer-events: auto !important; }
+img { max-width: 100%; }
+a { color: inherit; }
+
+/* Preserve the original desktop grid while keeping it inside the viewport. */
+@media (min-width: 769px) {
+  .block-layout,
+  .block-sticky-bar-layout { max-width: 1224px; }
+}
+
+@media (max-width: 768px) {
+  .block-layout,
+  .block-sticky-bar-layout { width: 100% !important; max-width: 100% !important; }
+  .block-header { width: 100%; }
+}
+
+form input,
+form textarea,
+form select,
+input,
+textarea,
+select { font: inherit; }
+
+.form-success-message {
+  padding: 14px 18px;
+  margin-top: 12px;
+  border-radius: 6px;
+  background: #f2eee9;
+  color: #312d29;
+}
